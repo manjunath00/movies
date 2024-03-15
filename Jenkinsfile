@@ -3,7 +3,10 @@ pipeline {
 
     stages {
         stage('Git Pull') {
+            steps {
+                // Checkout code from Git repository
                 git url: 'https://github.com/manjunath00/movies.git'
+            }
         }
 
 
