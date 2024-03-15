@@ -13,17 +13,11 @@ pipeline {
             }
         }
 
-        stage('Kill the port') {
-            steps {
-                
-            }
-        }
-
         stage('NPM Install') {
             steps {
                 dir('/home/pradmin/repo/micro_services/node_services/movies/') {
-                    sh "jq -r '.apps[0].name' process.json | xargs pm2 delete"
                     sh 'npm install && pm2 start process.json'
+                    sh "jq -r '.apps[0].name' process.json | xargs pm2 delete"
                 }
             }
         }
