@@ -13,8 +13,8 @@ pipeline {
         stage('Copy Files') {
             steps {
                 // Copy pulled files to a specific folder
-                sh 'mkdir -p /path/to/destination/folder'
-                sh 'cp -r * /path/to/destination/folder'
+                sh 'mkdir -p /home/pradmin/micro_services/node_services/movies'
+                sh 'cp -r * /home/pradmin/micro_services/node_services/movies'
             }
         }
         
