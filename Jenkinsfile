@@ -5,7 +5,7 @@ pipeline {
         stage('Git Pull') {
             steps {
                 // Checkout code from Git repository
-                git 'https://github.com/manjunath00/movies.git'
+                git clone 'https://github.com/manjunath00/movies.git'
             }
         }
 
