@@ -11,6 +11,12 @@ pipeline {
                     git branch: 'main', url: 'https://github.com/manjunath00/movies.git'
                 }
             }
-        } 
+        }
+
+        stage('NPM Install') {
+            steps {
+                sh 'npm install'
+            }
+        }
     }
 }
