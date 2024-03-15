@@ -15,8 +15,10 @@ pipeline {
 
         stage('NPM Install') {
             steps {
+                dir('/home/pradmin/repo/micro_services/node_services/movies') {
                 sh 'npm install'
                 sh 'pm2 start process.json'
+                }
             }
         }
     }
