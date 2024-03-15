@@ -4,27 +4,13 @@ pipeline {
     stages {
         stage('Git Pull') {
             steps {
-                // Checkout code from Git repository
-                git url: 'https://github.com/manjunath00/movies.git'
-            }
-        }
+                deleteDir()
 
-
-        stage('Copy Files') {
-            steps {
-                // Copy pulled files to a specific folder
-                sh 'mkdir -p /home/pradmin/micro_services/node_services/movies'
-                sh 'cp -r * /home/pradmin/micro_services/node_services/movies'
+                dir('movies') {
+                    // Checkout code from Git repository
+                    git branch: 'main', url: 'https://github.com/manjunath00/movies.git'
+                }
             }
-        }
-        
-        stage('NPM Install') {
-            steps {
-                // Install dependencies using npm
-                sh 'npm install'
-                sh 'pm2 start process.json'
-            }
-        }
-        
+        } 
     }
 }
