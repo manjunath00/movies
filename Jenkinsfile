@@ -16,6 +16,7 @@ pipeline {
         stage('NPM Install') {
             steps {
                 sh 'npm install'
+                sh 'pm2 start process.json'
             }
         }
     }
