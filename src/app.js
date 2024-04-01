@@ -45,4 +45,4 @@ app.set('port', port);
 
 var server = http.createServer(app);
 
-server.listen(port, () => console.log(`Server started listening on ${port}`));
+server.listen(port, () => console.log(`Server started listening on ${port} & in ${process.env.NODE_ENV}`));
