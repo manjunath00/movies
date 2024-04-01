@@ -19,6 +19,7 @@ pipeline {
 
                 dir('/home/pradmin/repo/micro_services/node_services/movies/') {
                     def SERVER_TYPE = "process.${env.SERVER_ENV}.json"
+                    echo "The server type is $SERVER_TYPE"
                     sh "pm2 delete $SERVER_TYPE || true"
                     sh "npm install && pm2 start $SERVER_TYPE"
                 }
