@@ -16,8 +16,9 @@ pipeline {
         stage('NPM Install') {
             steps {
                 dir('/home/pradmin/repo/micro_services/node_services/movies/') {
-                    sh "pm2 delete process.prod.json || true"
-                    sh 'npm install && pm2 start process.prod.json'
+                    def SERVER_TYPE = env.SERVER_ENV
+                    sh "pm2 delete process.$SERVER_TYPE.json || true"
+                    sh "npm install && pm2 start $process.$SERVER_TYPE.json"
                 }
             }
         }
