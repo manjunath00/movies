@@ -18,9 +18,9 @@ pipeline {
                 script {
 
                 dir('/home/pradmin/repo/micro_services/node_services/movies/') {
-                    def SERVER_TYPE = env.SERVER_ENV
-                    sh "pm2 delete process.$SERVER_TYPE.json || true"
-                    sh "npm install && pm2 start $process.$SERVER_TYPE.json"
+                    def SERVER_TYPE = "process.${env.SERVER_ENV}.json"
+                    sh "pm2 delete $SERVER_TYPE || true"
+                    sh "npm install && pm2 start $SERVER_TYPE"
                 }
                 }
             }
