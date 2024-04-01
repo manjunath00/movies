@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "nodemon ./src/app.js",
-    "start:prod": "pm2 start process.json"
+    "start:prod": "pm2 start process.prod.json",
+    "start:dev": "pm2 start process.dev.json",
+    "start:stage": "pm2 start process.stage.json"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
