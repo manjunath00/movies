@@ -40,9 +40,9 @@ app.use(function(err, req, res, next) {
 });
 
 
-var port = 12000;
+const port = 12000;
 app.set('port', port);
 
-var server = http.createServer(app);
+let server = http.createServer(app);
 
 server.listen(port, () => console.log(`Server started listening on ${port} & in ${process.env.NODE_ENV}`));
