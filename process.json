@@ -1,7 +1,7 @@
 {
     "apps": [{
         "name": "Movies",
-        "script": "./bin/www",
+        "script": "./src/app.js",
         "ignore_watch": [
             "node_modules",
             ".vscode",
