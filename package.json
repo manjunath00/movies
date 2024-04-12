@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nodemon ./src/app.js",
     "start:prod": "pm2 start process.prod.json",
+    "start": "pm2 start process.prod.json",
     "start:dev": "pm2 start process.dev.json",
     "start:stage": "pm2 start process.stage.json"
   },
@@ -14,7 +15,8 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "pm2": "^5.3.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"

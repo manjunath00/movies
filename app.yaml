@@ -1,4 +1,4 @@
-runtime: nodejs12 # Specifies the Node.js runtime version
+runtime: nodejs20 # Specifies the Node.js runtime version
 
 # Environment variables
 env_variables:
@@ -8,5 +8,4 @@ env_variables:
 automatic_scaling:
   min_instances: 1
   max_instances: 10
-  cpu_utilization:
-    target_utilization: 0.65
+
