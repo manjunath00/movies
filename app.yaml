@@ -1,0 +1,12 @@
+runtime: nodejs12 # Specifies the Node.js runtime version
+
+# Environment variables
+env_variables:
+  PORT: 14000
+
+# Automatic scaling based on request rate
+automatic_scaling:
+  min_instances: 1
+  max_instances: 10
+  cpu_utilization:
+    target_utilization: 0.65
