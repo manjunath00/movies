@@ -1,21 +1,44 @@
 {
-    "apps": [{
-        "name": "Movies",
-        "script": "./src/app.js",
-        "ignore_watch": [
-            "node_modules",
-            ".vscode",
-            ".eslintrc.json",
-            ".gitignore",
-            ".jsbeautifyrc",
-            "package.json",
-            "process.dev.json",
-            "process.stage.json",
-            "process.prod.json",
-            "README.md"
-        ],
-        "env": {
-            "NODE_ENV": "production"
+    "apps": [
+        {
+            "name": "MOVIES-1",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13001
+            }
+        },
+        {
+            "name": "MOVIES-3",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13002
+            }
+        },
+        {
+            "name": "MOVIES-3",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13003
+            }
+        },
+        {
+            "name": "MOVIES-4",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13004
+            }
         }
-    }]
+    ]
 }

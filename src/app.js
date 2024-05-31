@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var http = require('http');
+var cluster = require('cluster');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -40,9 +41,15 @@ app.use(function(err, req, res, next) {
 });
 
 // port
-const port = process.env.PORT || 13000;
+const port = process.env.PORT;
 app.set('port', port);
 
 let server = http.createServer(app);
 
-server.listen(port, () => console.log(`Server started listening on ${port} & in ${process.env.NODE_ENV}`));
+server.listen(port, () => 
+  {
+    console.log(process.env)
+  console.log(`Server started listening on ${port} & in ${process.env.NODE_ENV} ${process.env.NODE_APP_INSTANCE}`)
+})
+  
+  ;
