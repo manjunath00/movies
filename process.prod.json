@@ -11,7 +11,7 @@
             }
         },
         {
-            "name": "MOVIES-3",
+            "name": "MOVIES-2",
             "script": "./src/app.js",
             "instances": 1,
             "exec_mode": "fork",
