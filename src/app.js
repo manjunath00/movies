@@ -25,12 +25,12 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -46,10 +46,7 @@ app.set('port', port);
 
 let server = http.createServer(app);
 
-server.listen(port, () => 
-  {
-    console.log(process.env)
-  console.log(`Server started listening on ${port} & in ${process.env.NODE_ENV} ${process.env.NODE_APP_INSTANCE}`)
-})
-  
-  ;
+server.listen(port, () => {
+  console.log(process.env)
+  console.log(`Server started listening on ${port}`)
+});
