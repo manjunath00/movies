@@ -1,0 +1,94 @@
+{
+    "apps": [
+        {
+            "name": "top-movies-1",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13010
+            }
+        },
+        {
+            "name": "top-movies-2",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13011
+            }
+        },
+        {
+            "name": "top-movies-3",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13012
+            }
+        },
+        {
+            "name": "top-movies-4",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13013
+            }
+        },
+        {
+            "name": "top-movies-5",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13014
+            }
+        },
+        {
+            "name": "top-movies-6",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13015
+            }
+        },
+        {
+            "name": "top-movies-7",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13016
+            }
+        },
+        {
+            "name": "top-movies-8",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13017
+            }
+        },
+        {
+            "name": "top-movies-9",
+            "script": "./src/app.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": 13018
+            }
+        }
+    ]
+}
