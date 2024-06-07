@@ -9,8 +9,9 @@ const obj = {
 
 const items = [];
 let port = 13010;
+const NUM_INSTANCES = 20
 
-for (let i = 1; i < 10; i++) {
+for (let i = 1; i < NUM_INSTANCES; i++) {
     const newObj = { ...obj }
     const newPort = port
 
@@ -30,4 +31,4 @@ instances.apps = items;
 
 const instancesJson = JSON.stringify(instances);
 
-fs.writeFileSync("process.json", instancesJson)
+fs.writeFileSync("process.prod.json", instancesJson)
