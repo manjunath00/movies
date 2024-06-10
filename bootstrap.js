@@ -9,7 +9,7 @@ const obj = {
 
 const items = [];
 let port = 13010;
-const NUM_INSTANCES = 20
+const NUM_INSTANCES = 64
 
 for (let i = 1; i < NUM_INSTANCES; i++) {
     const newObj = { ...obj }

@@ -7,7 +7,8 @@
     "start:prod": "pm2 start process.prod.json",
     "start": "npm i && nodemon ./src/app.js",
     "start:dev": "pm2 start process.dev.json",
-    "start:stage": "pm2 start process.stage.json"
+    "start:stage": "pm2 start process.stage.json",
+    "start:bootstrap": "node bootstrap.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
